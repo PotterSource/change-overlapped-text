@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      body {
+        background-color: royalblue;
+      }
+      h1 {
+        color: salmon;
+        text-transform: uppercase;
+        font-size: 120px;
+        line-height: 120px;
+        text-align: center;
+        width: 100%;
+        position: relative;
+        mix-blend-mode: luminosity;
+      }
+      .isolated {
+        isolation: isolate;
+      }
+      .wrapper {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .black-circle {
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 500px;
+        height: 500px;
+        border-radius: 250px;
+        animation: oscillate 2s ease-in-out 0s infinite alternate-reverse;
+      }
+      @keyframes oscillate {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="isolated wrapper">
+      <div class="black-circle"></div>
+      <h1>This is some text.</h1>
+    </div>
+  </body>
+</html>
